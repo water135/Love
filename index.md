@@ -8,7 +8,7 @@
 				height: 100px;
 				width: 100px;
 				background: red;
-				animation: qq 3s 1s linear infinite;
+				animation: qq 3s 3s linear infinite;
 				
 				position: relative;
 				

@@ -1,0 +1,69 @@
+2<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>		
+	</head>
+	<body>
+		<!--
+        	input标签：用于收集用户信息，单标签
+        	属性：type：
+        	         	属性值
+		        	    text：定义文本域
+		        	    password：密码框，有掩码
+		        	    submit：提交按钮
+		        	    image:图像域，图像按钮
+		        	    file:文件域，
+		        	    reset：重置按钮是清除用户输入的信息，不是清空，只是初始化，
+		        	    意思是如果后面有定义value有值，则会保留，人工输入的则会都被清除
+		        	    radio：单选，在选项后面加checked就会初始化选中，在输入页面可修改
+		        	    checkbox：多选,在选项后面加checked就会初始化选中，在输入页面可修改
+		        	    file:文件上传，注意在form里加上属性
+		        	    hidden:隐藏信息不让用户看到，在地址栏中看不到，比如ID的隐藏
+	        	name：1.根据前面含义写,格式要符合标志符
+					  2.要提交到后天，必须加这一项
+					  3.用于单选和多选的分组，同一组name值要一致
+	        	value:text时就是文本框里的内容，在输入页面可删除
+	        	      password时就是密码值，在输入页面可删除
+	        	      submit/button/reset时就是提交按钮所显示内容，在输入页面不可修改
+	        	placeholder：定义输入框的提示内容，暗色字体
+	        	maxlength:定义文本框最多输入多少字符
+	        	readongly：只读，不能输入
+	        	disabled:禁用，不可输入，暗色字体
+        		button标签：普通按钮，单独使用没有效果，通常结合js使用       
+        	    ID：采集用户信息 
+        -->
+		<form action="" method="get" enctype="multipart/form-data" >
+			姓名：<input type="text" name="name"/><br />
+			密码：<input type="password" name="name"/><br />
+			性别:
+			<input type="radio" name="sex" value="1" checked="checked"/>男
+			<input type="radio" name="sex" value="2" />女
+			<input type="radio" name="sex" value="0" />不祥<br />
+			兴趣：
+			<input type="checkbox" name="1"  />睡觉
+			<input type="checkbox" name="2" checked="checked" />跑步
+			<input type="checkbox" name="3"  checked="checked" />打球
+			<input type="checkbox" name="4"  />游戏<br />
+			上传头像图片：
+			<input type="file" name="file" value="" /><br />
+			隐藏：
+			<input type="hidden" name="id" value="12323333333333" /><br />
+			<input type="submit" value="我要提交" />
+			<input type="reset" value="重置" />
+			<button>普通按钮</button><br />
+			<br />
+			以下了解:<br />
+			图片：<input type="image" src="img/HBuilder.png" name="picture" /><br />
+			颜色：<input type="color" name="" value="" /><br />
+			电话：<input type="tel" name="" value="" /><br />
+			邮箱：<input type="email" name="" value="" /><br />
+			日期：<input type="date" name="" value="" /><br />
+			时间：<input type="time" name="" value="" /><br />
+			星期：<input type="week" name="" value="" /><br />
+			搜索：<input type="search" name="" value="" /><br />
+			文件上传：<input type="file"  name="" />
+			
+			
+	</body>
+</html>

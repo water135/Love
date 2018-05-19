@@ -1,36 +1,21 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="utf-8" />
 		<title></title>
-	</head>
-
-		<!--
-			了解
-			frameset标签：
-			一定要先删掉body标签
-					属性：rows：上下分区
-					      cols：左右分区
-					      scrolling:滚条，默认有		    	
-		-->
-	
-		<frameset rows="20%,60%,20%">
-			<frame src="01表单标签.html"/>
-			
-					<frameset cols="30%,30%,40%">
-							<frame src="02表单元素iuput.html" />
-							<frame src="02表单元素iuput.html"/>
-							<frame src="02表单元素iuput.html"/>
-					</frameset>
-					
-					<frameset cols="30%,30%,40%">
-							<frame src="02表单元素iuput.html"/>
-							<frame src="02表单元素iuput.html"/>
-							<frame src="02表单元素iuput.html"/>
-					</frameset>
-			
-		</frameset>
+		<script type="text/javascript">		
+			var password = prompt("请输入密码 :");			
+			if (password == "0000") {
+				alert("welcome you");
+				document.write("<img src=img/119.jpg width=500 height= 500>");
+				document.write ("<audio src=img/北京欢迎你.mp3 autoplay=autoplay></audio>");
+			} else{
+				alert("password error");
+				window.close();
+			}
 		
+		</script>
+	<body>
 		
-
+	</body>
 </html>

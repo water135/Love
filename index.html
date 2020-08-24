@@ -2,16 +2,116 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title></title>
-		<script type="text/javascript">		
-			var password = prompt("请输入密码 : (纪念日)");			
-			if (password == "0801") {
-				window.location="LoveText.html"
-			} else{
-				alert("密码错误！")
+		<title></title>	
+		<style type="text/css">
+			* {
+					margin: 0;
+					padding: 0;
+				}
+				body{
+					background: url(img/117.jpg) no-repeat;
+					/*css3属性  背景图片会填满网页，且随着窗口大小改变而改变*/
+					background-size: cover;
+					overflow: hidden;
+				}
+			ul{
+				width: 200px;
+				height: 200px;
+				/*background-color: red;*/
+				position: absolute;
+				bottom: 100px;
+				/*水平居中*/
+				left: 50%;
+				margin-left: -100px;	
+				transform-style: preserve-3d;
+				/*transform: rotateX(-10deg);  此处不要了，放在@keyframes里面有俯视效果，                     				因为@keyframes里有transform属性会覆盖这个transform属性没有效果*/	
+				animation: sport 6s linear infinite;		
 			}
-		</script>
+			ul li{
+				list-style: none;
+				width: 200px;
+				height: 200px;
+				font-size: 60px;
+				text-align: center;
+				line-height: 200px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				background-color: #000000;
+			}
+			ul li img{
+				width: 200px;
+				height: 200px;
+				border: 5px solid white;
+				box-sizing: border-box;
+			}
+			ul:hover{
+				animation-play-state: paused;
+			}
+			ul:hover li img{
+				opacity: 0.5;
+			}
+			ul li:hover img{
+				opacity: 1;
+			}
+			.dong{
+				width: 173px;
+				height: 157px;
+				position: absolute;
+				left: 100px;
+				bottom: 100px;
+				animation: move 10s linear infinite;
+			}
+			@keyframes move{
+				0%{left: 100px;bottom: 100px;opacity: 1;}
+				20%{left: 300px;bottom: 300px;opacity: 0;}
+				40%{left: 500px;bottom: 500px;opacity: 1;}
+				60%{left: 800px;bottom: 300px;opacity: 0;}
+				80%{left: 1200px;bottom: 100px;opacity: 1;}
+				100%{left: 800px;bottom: -200px;opacity: 0;}
+			}
+			ul li:nth-child(1){
+				/*background-color: red;*/	
+				transform: rotateY(60deg) translateZ(200px);		
+			}
+			ul li:nth-child(2){
+				/*background-color: green;*/
+				transform: rotateY(120deg) translateZ(200px);
+			}
+			ul li:nth-child(3){
+				/*background-color: blue;*/
+				transform: rotateY(180deg) translateZ(200px);
+			}
+			ul li:nth-child(4){
+				/*background-color: yellow;*/
+				transform: rotateY(240deg) translateZ(200px);
+			}
+			ul li:nth-child(5){
+				/*background-color: purple;*/
+				transform: rotateY(300deg) translateZ(200px);
+			}
+			ul li:nth-child(6){
+				/*background-color: pink;*/
+				transform: rotateY(360deg) translateZ(200px);
+			}
+			@keyframes sport{
+				/*注意点:在编写动画属性时,固定不变的值写在前面,需要变的写在后面rotateX() rotateY();*/
+				from{transform: rotateX(-10deg) rotateY(0);}
+				to{transform: rotateX(-10deg) rotateY(360deg);}
+			}
+		</style>
+	</head>
 	<body>
-		<h1>请刷新后，重新输入密码</h1>
+		<ul>
+			<!--六张图-->
+			<li><img src="img/001.jpg"/></li>
+			<li><img src="img/002.jpg"/></li>
+			<li><img src="img/003.jpg"/></li>
+			<li><img src="img/004.jpg"/></li>
+			<li><img src="img/005.jpg"/></li>
+			<li><img src="img/006.jpg"/></li>
+		</ul>
+		<img src="img/timg.png" class="dong" />
+		<audio src="天然呆-后弦·《我知道你也很想念》.mp3" autoplay="autoplay" loop="loop"></audio>
 	</body>
 </html>
